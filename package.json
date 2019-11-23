@@ -1,0 +1,22 @@
+{
+  "name": "realty-finder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarhan-azizov/realty-finder.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarhan-azizov/realty-finder/issues"
+  },
+  "homepage": "https://github.com/sarhan-azizov/realty-finder#readme",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.40.0"
+  }
+}
