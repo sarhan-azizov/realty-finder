@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node index.js",
-    "docker:build": "docker image build -t realty-finder ."
+    "docker:build": "docker image build -t realty-finder .",
+    "docker:run": "docker run -it --rm sarhan/realty-finder"
   },
   "repository": {
     "type": "git",
