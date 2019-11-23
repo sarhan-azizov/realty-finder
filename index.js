@@ -2,7 +2,7 @@ process.env.TZ = "Europe/Kiev";
 
 const TelegramBot = require('node-telegram-bot-api');
 
-const TOKEN = process.env.TELEGRAM_TOKEN || '805923378:AAFQREfGoswE47YyOPJwx9gNTSQzo8HM2zE';
+const TOKEN = process.env.TELEGRAM_TOKEN;
 const tBot = new TelegramBot(TOKEN, { polling: true });
 
 tBot.onText(/^\/start$/, (msg, match) => {
