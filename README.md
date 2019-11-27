@@ -5,6 +5,10 @@ docker image build -t realty-finder .
 Docker hub Automated Builds
 https://hub.docker.com/repository/docker/sarhan/realty-finder/builds
 
+docker login
+docker tag auth-nodejs:latest sarhan/auth-nodejs
+Docker push sarhan/auth-nodejs:latest
+
 ## Launch
 docker pull sarhan/realty-finder
 docker run -it --rm sarhan/realty-finder
