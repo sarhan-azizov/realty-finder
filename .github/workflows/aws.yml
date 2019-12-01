@@ -55,7 +55,7 @@ jobs:
       id: build-image
       env:
         ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-        ECR_REPOSITORY: realty-finder
+        ECR_REPOSITORY: 767946857844.dkr.ecr.us-east-1.amazonaws.com/realty-finder
         IMAGE_TAG: ${{ github.sha }}
       run: |
         # Build a docker container and
