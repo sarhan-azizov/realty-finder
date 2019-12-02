@@ -1,58 +1,121 @@
 {
-  "ipcMode": null,
-  "executionRoleArn": null,
-  "containerDefinitions": [
-    {
-      "dnsSearchDomains": null,
-      "logConfiguration": null,
-      "entryPoint": null,
-      "portMappings": [],
-      "command": null,
-      "linuxParameters": null,
-      "cpu": 0,
-      "environment": [],
-      "resourceRequirements": null,
-      "ulimits": null,
-      "dnsServers": null,
-      "mountPoints": [],
-      "workingDirectory": null,
-      "secrets": null,
-      "dockerSecurityOptions": null,
-      "memory": null,
-      "memoryReservation": 128,
-      "volumesFrom": [],
-      "stopTimeout": null,
-      "image": "sarhan/realty-finder:latest",
-      "startTimeout": null,
-      "firelensConfiguration": null,
-      "dependsOn": null,
-      "disableNetworking": null,
-      "interactive": null,
-      "healthCheck": null,
-      "essential": true,
-      "links": null,
-      "hostname": null,
-      "extraHosts": null,
-      "pseudoTerminal": null,
-      "user": null,
-      "readonlyRootFilesystem": null,
-      "dockerLabels": null,
-      "systemControls": null,
-      "privileged": null,
-      "name": "realty-finder"
-    }
-  ],
-  "placementConstraints": [],
-  "memory": null,
-  "taskRoleArn": null,
-  "family": "realty-finder",
-  "pidMode": null,
-  "requiresCompatibilities": [
-    "EC2"
-  ],
-  "networkMode": "bridge",
-  "cpu": null,
-  "inferenceAccelerators": null,
-  "proxyConfiguration": null,
-  "volumes": []
+    "family": "", 
+    "taskRoleArn": "", 
+    "networkMode": "host", 
+    "containerDefinitions": [
+        {
+            "name": "", 
+            "image": "", 
+            "cpu": 0, 
+            "memory": 0, 
+            "memoryReservation": 0, 
+            "links": [
+                ""
+            ], 
+            "portMappings": [
+                {
+                    "containerPort": 0, 
+                    "hostPort": 0, 
+                    "protocol": "tcp"
+                }
+            ], 
+            "essential": true, 
+            "entryPoint": [
+                ""
+            ], 
+            "command": [
+                ""
+            ], 
+            "environment": [
+                {
+                    "name": "", 
+                    "value": ""
+                }
+            ], 
+            "mountPoints": [
+                {
+                    "sourceVolume": "", 
+                    "containerPath": "", 
+                    "readOnly": true
+                }
+            ], 
+            "volumesFrom": [
+                {
+                    "sourceContainer": "", 
+                    "readOnly": true
+                }
+            ], 
+            "linuxParameters": {
+                "capabilities": {
+                    "add": [
+                        ""
+                    ], 
+                    "drop": [
+                        ""
+                    ]
+                }, 
+                "devices": [
+                    {
+                        "hostPath": "", 
+                        "containerPath": "", 
+                        "permissions": [
+                            "write"
+                        ]
+                    }
+                ], 
+                "initProcessEnabled": true
+            }, 
+            "hostname": "", 
+            "user": "", 
+            "workingDirectory": "", 
+            "disableNetworking": true, 
+            "privileged": true, 
+            "readonlyRootFilesystem": true, 
+            "dnsServers": [
+                ""
+            ], 
+            "dnsSearchDomains": [
+                ""
+            ], 
+            "extraHosts": [
+                {
+                    "hostname": "", 
+                    "ipAddress": ""
+                }
+            ], 
+            "dockerSecurityOptions": [
+                ""
+            ], 
+            "dockerLabels": {
+                "KeyName": ""
+            }, 
+            "ulimits": [
+                {
+                    "name": "core", 
+                    "softLimit": 0, 
+                    "hardLimit": 0
+                }
+            ], 
+            "logConfiguration": {
+                "logDriver": "syslog", 
+                "options": {
+                    "KeyName": ""
+                }
+            }
+        }
+    ], 
+    "volumes": [
+        {
+            "name": "", 
+            "host": {
+                "sourcePath": ""
+            }
+        }
+    ], 
+    "placementConstraints": [
+        {
+            "type": "memberOf", 
+            "expression": ""
+        }
+    ]
 }
