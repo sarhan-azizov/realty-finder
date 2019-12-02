@@ -17,7 +17,7 @@
       "entryPoint": null,
       "command": null,
       "environment": [
-        { "TELEGRAM_TOKEN" : "string", "value" : "805923378:AAFQREfGoswE47YyOPJwx9gNTSQzo8HM2zE" }
+        { "name" : "TELEGRAM_TOKEN", "value" : "805923378:AAFQREfGoswE47YyOPJwx9gNTSQzo8HM2zE" }
       ],
       "mountPoints": [],
       "volumesFrom": [],
