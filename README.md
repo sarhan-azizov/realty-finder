@@ -1,4 +1,4 @@
-## Build Image2
+## Build Image10
 docker image build -t realty-finder .
 
 ## Release
