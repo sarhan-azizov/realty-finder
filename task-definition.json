@@ -17,7 +17,7 @@
       "entryPoint": null,
       "command": null,
       "environment": [
-        { "TELEGRAM_TOKEN" : "string", "value" : "${{ secrets.AWS_ACCESS_KEY_ID }}" }
+        { "name" : "TELEGRAM_TOKEN", "value" : "${{ secrets.TELEGRAM_TOKEN }}" }
       ],
       "mountPoints": [],
       "volumesFrom": [],
