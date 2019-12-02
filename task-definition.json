@@ -6,10 +6,8 @@
   "containerDefinitions": [
     {
       "name": "realty-finder",
-      "image": "",
-      "repositoryCredentials": {
-        "credentialsParameter": ""
-      },
+      "image": null,
+      "repositoryCredentials": null,
       "cpu": 0,
       "memory": null,
       "memoryReservation": 128,
