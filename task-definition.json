@@ -1,121 +1,59 @@
 {
-    "family": "", 
-    "taskRoleArn": "", 
-    "networkMode": "host", 
-    "containerDefinitions": [
-        {
-            "name": "", 
-            "image": "", 
-            "cpu": 0, 
-            "memory": 0, 
-            "memoryReservation": 0, 
-            "links": [
-                ""
-            ], 
-            "portMappings": [
-                {
-                    "containerPort": 0, 
-                    "hostPort": 0, 
-                    "protocol": "tcp"
-                }
-            ], 
-            "essential": true, 
-            "entryPoint": [
-                ""
-            ], 
-            "command": [
-                ""
-            ], 
-            "environment": [
-                {
-                    "name": "", 
-                    "value": ""
-                }
-            ], 
-            "mountPoints": [
-                {
-                    "sourceVolume": "", 
-                    "containerPath": "", 
-                    "readOnly": true
-                }
-            ], 
-            "volumesFrom": [
-                {
-                    "sourceContainer": "", 
-                    "readOnly": true
-                }
-            ], 
-            "linuxParameters": {
-                "capabilities": {
-                    "add": [
-                        ""
-                    ], 
-                    "drop": [
-                        ""
-                    ]
-                }, 
-                "devices": [
-                    {
-                        "hostPath": "", 
-                        "containerPath": "", 
-                        "permissions": [
-                            "write"
-                        ]
-                    }
-                ], 
-                "initProcessEnabled": true
-            }, 
-            "hostname": "", 
-            "user": "", 
-            "workingDirectory": "", 
-            "disableNetworking": true, 
-            "privileged": true, 
-            "readonlyRootFilesystem": true, 
-            "dnsServers": [
-                ""
-            ], 
-            "dnsSearchDomains": [
-                ""
-            ], 
-            "extraHosts": [
-                {
-                    "hostname": "", 
-                    "ipAddress": ""
-                }
-            ], 
-            "dockerSecurityOptions": [
-                ""
-            ], 
-            "dockerLabels": {
-                "KeyName": ""
-            }, 
-            "ulimits": [
-                {
-                    "name": "core", 
-                    "softLimit": 0, 
-                    "hardLimit": 0
-                }
-            ], 
-            "logConfiguration": {
-                "logDriver": "syslog", 
-                "options": {
-                    "KeyName": ""
-                }
-            }
-        }
-    ], 
-    "volumes": [
-        {
-            "name": "", 
-            "host": {
-                "sourcePath": ""
-            }
-        }
-    ], 
-    "placementConstraints": [
-        {
-            "type": "memberOf", 
-            "expression": ""
-        }
-    ]
+  "family": "realty-finder",
+  "taskRoleArn": null,
+  "executionRoleArn": null,
+  "networkMode": "bridge",
+  "containerDefinitions": [
+    {
+      "name": "realty-finder",
+      "image": "767946857844.dkr.ecr.us-east-1.amazonaws.com/realty-finder:be9a7863ff131de828f3c64ab0cf5a857bb5446c",
+      "repositoryCredentials": {
+        "credentialsParameter": ""
+      },
+      "cpu": 0,
+      "memory": null,
+      "memoryReservation": 128,
+      "links": null,
+      "portMappings": [],
+      "essential": true,
+      "entryPoint": null,
+      "command": null,
+      "environment": [],
+      "mountPoints": [],
+      "volumesFrom": [],
+      "linuxParameters": null,
+      "secrets": null,
+      "dependsOn": null,
+      "startTimeout": null,
+      "stopTimeout": null,
+      "hostname": null,
+      "user": null,
+      "workingDirectory": null,
+      "disableNetworking": null,
+      "privileged": null,
+      "readonlyRootFilesystem": null,
+      "dnsServers": null,
+      "dnsSearchDomains": null,
+      "extraHosts": null,
+      "dockerSecurityOptions": null,
+      "interactive": null,
+      "pseudoTerminal": null,
+      "dockerLabels": null,
+      "ulimits": null,
+      "logConfiguration": null,
+      "healthCheck": null,
+      "systemControls": null,
+      "resourceRequirements": null,
+      "firelensConfiguration": null
+    }
+  ],
+  "volumes": [],
+  "placementConstraints": [],
+  "requiresCompatibilities": ["EC2"],
+  "cpu": null,
+  "memory": null,
+  "pidMode": null,
+  "ipcMode": null,
+  "proxyConfiguration": null,
+  "inferenceAccelerators": null
 }
