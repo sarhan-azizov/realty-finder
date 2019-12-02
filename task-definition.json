@@ -16,7 +16,9 @@
       "essential": true,
       "entryPoint": null,
       "command": null,
-      "environment": [],
+      "environment": [
+        { "TELEGRAM_TOKEN" : "string", "value" : "${{ secrets.AWS_ACCESS_KEY_ID }}" }
+      ],
       "mountPoints": [],
       "volumesFrom": [],
       "linuxParameters": null,
