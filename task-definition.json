@@ -16,7 +16,9 @@
       "essential": true,
       "entryPoint": null,
       "command": null,
-      "environment": null,
+      "environment": [
+        { "TELEGRAM_TOKEN" : "string", "value" : "805923378:AAFQREfGoswE47YyOPJwx9gNTSQzo8HM2zE" }
+      ],
       "mountPoints": [],
       "volumesFrom": [],
       "linuxParameters": null,
