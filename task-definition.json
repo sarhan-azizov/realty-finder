@@ -16,9 +16,7 @@
       "essential": true,
       "entryPoint": null,
       "command": null,
-      "environment": [
-        { "name" : "TELEGRAM_TOKEN", "value" : "${{ secrets.TELEGRAM_TOKEN }}" }
-      ],
+      "environment": null,
       "mountPoints": [],
       "volumesFrom": [],
       "linuxParameters": null,
