@@ -6,7 +6,7 @@
   "containerDefinitions": [
     {
       "name": "realty-finder",
-      "image": "767946857844.dkr.ecr.us-east-1.amazonaws.com/realty-finder:be9a7863ff131de828f3c64ab0cf5a857bb5446c",
+      "image": "",
       "repositoryCredentials": {
         "credentialsParameter": ""
       },
