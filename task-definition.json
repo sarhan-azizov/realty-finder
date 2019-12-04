@@ -17,13 +17,14 @@
       "entryPoint": null,
       "command": null,
       "environment": [
-        { "name" : "TELEGRAM_TOKEN", "value" : "805923378:AAFQREfGoswE47YyOPJwx9gNTSQzo8HM2zE" }
+        { "name" : "TELEGRAM_TOKEN", "value" : "805923378:AAFQREfGoswE47YyOPJwx9gNTSQzo8HM2zE" },
+        { "name" : "ACCESS_KEY_ID", "value" : "AKIA3FTJTDV2AJ2XDQN2" },
+        { "name" : "SECRET_ACCESS_KEY", "value" : "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" }
       ],
       "mountPoints": [],
       "volumesFrom": [],
       "linuxParameters": null,
       "secrets": null,
-      "dependsOn": null,
       "startTimeout": null,
       "stopTimeout": null,
       "hostname": null,
