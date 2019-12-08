@@ -1,4 +1,6 @@
+const fetch = require("node-fetch");
 const TelegramBot = require('node-telegram-bot-api');
+
 const db = require('./db');
 const helpers = require('./helpers');
 
@@ -42,7 +44,9 @@ tBot.onText(/^\/find$/, async (msg, match) => {
         }
     });
 
-    await tBot.sendMessage(transformedUserData.id, "STARTED", {
+    const offers = await fetch.post('https://221hraab76.execute-api.us-east-1.amazonaws.com/prod/realty-finder', { method: 'POST'});
+
+    await tBot.sendMessage(transformedUserData.id, offers.json(), {
         disable_web_page_preview: true,
         parse_mode: 'HTML'
     });
