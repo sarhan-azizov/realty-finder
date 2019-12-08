@@ -44,11 +44,28 @@ tBot.onText(/^\/find$/, async (msg, match) => {
         }
     });
 
-    const offers = await fetch.post('https://221hraab76.execute-api.us-east-1.amazonaws.com/prod/realty-finder', { method: 'POST'});
+    const response = await fetch(process.env.API_GETAWAY, { method: 'POST'});
+    const offers = await response.json();
+    const promisedOffers = [...offers];
 
-    await tBot.sendMessage(transformedUserData.id, offers.json(), {
-        disable_web_page_preview: true,
-        parse_mode: 'HTML'
+    promisedOffers.map(async offer =>  {
+        const response = await fetch(process.env.API_GETAWAY+'/details', { method: 'POST', body: JSON.stringify(offer) });
+        const offerDetails = await response.json();
+
+        await tBot.sendMediaGroup(transformedUserData.id, offerDetails.images);
+        await tBot.sendMessage(transformedUserData.id, offerDetails.title, {
+            parse_mode: 'HTML',
+            disable_web_page_preview: true
+        });
+
+        console.log('==>', new Date().getSeconds());
+    });
+
+    promisedOffers.map(async (promisedOffer) => {
+        await setTimeout(async () => {
+            await promisedOffer;
+        }, 2000);
+        console.log('==>MAP ', new Date().getSeconds());
     });
 });
 
@@ -72,4 +89,3 @@ tBot.onText(/^\/stop$/, async (msg, match) => {
         parse_mode: 'HTML'
     });
 });
-
