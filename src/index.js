@@ -46,27 +46,24 @@ tBot.onText(/^\/find$/, async (msg, match) => {
 
     const response = await fetch(process.env.API_GETAWAY, { method: 'POST'});
     const offers = await response.json();
-    const promisedOffers = [...offers];
+    const promisedOffers = offers.reduce((accum, offer) => (
+        [...accum, () => fetch(process.env.API_GETAWAY+'/details', { method: 'POST', body: JSON.stringify(offer) })]
+    ), []);
 
-    promisedOffers.map(async offer =>  {
-        const response = await fetch(process.env.API_GETAWAY+'/details', { method: 'POST', body: JSON.stringify(offer) });
+    await helpers.sequenceAsyncExecution(promisedOffers, async (response) => {
         const offerDetails = await response.json();
 
         await tBot.sendMediaGroup(transformedUserData.id, offerDetails.images);
-        await tBot.sendMessage(transformedUserData.id, offerDetails.title, {
-            parse_mode: 'HTML',
-            disable_web_page_preview: true
-        });
+
+        if (offerDetails.images.length > 1) {
+            await tBot.sendMessage(transformedUserData.id, offerDetails.title, {
+                parse_mode: 'HTML',
+                disable_web_page_preview: true
+            });
+        }
 
         console.log('==>', new Date().getSeconds());
-    });
-
-    promisedOffers.map(async (promisedOffer) => {
-        await setTimeout(async () => {
-            await promisedOffer;
-        }, 2000);
-        console.log('==>MAP ', new Date().getSeconds());
-    });
+    }, (err) => console.log('==>', err));
 });
 
 tBot.onText(/^\/stop$/, async (msg, match) => {
