@@ -12,7 +12,11 @@
       "memory": null,
       "memoryReservation": 128,
       "links": null,
-      "portMappings": [],
+      "portMappings": [{
+        "hostPort": 3000,
+        "protocol": "tcp",
+        "containerPort": 3000
+      }],
       "essential": true,
       "entryPoint": null,
       "command": null,
