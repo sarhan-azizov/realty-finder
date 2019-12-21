@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node src/index.js",
+    "start": "node src/server.js",
     "docker:build": "docker image build -t realty-finder .",
     "aws:ecs:instance": "ssh -i ./sarhan.pem ec2-user@ec2-50-19-22-108.compute-1.amazonaws.com"
   },

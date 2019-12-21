@@ -4,8 +4,6 @@ const TelegramBot = require('node-telegram-bot-api');
 const db = require('./db');
 const helpers = require('./helpers');
 
-require('dotenv').config();
-
 const tBot = new TelegramBot(process.env.TELEGRAM_TOKEN, { polling: true });
 
 tBot.onText(/^\/start$/, async (msg, match) => {
@@ -86,3 +84,5 @@ tBot.onText(/^\/stop$/, async (msg, match) => {
         parse_mode: 'HTML'
     });
 });
+
+module.exports = tBot;
